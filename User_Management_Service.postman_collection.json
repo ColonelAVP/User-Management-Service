@@ -1,0 +1,976 @@
+{
+	"info": {
+		"_postman_id": "eaf0ec60-7839-498f-bc5b-d2837143035b",
+		"name": "User_Management_Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get_User_data",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "success -> mobile_number",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}get-user-data/?mobile_number=8983914599",
+							"host": [
+								"{{host}}get-user-data"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "8983914599"
+								},
+								{
+									"key": "email",
+									"value": "athervpatil05@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 25 Jan 2023 07:03:30 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "207"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"user_data\": [\n        {\n            \"first_name\": \"Atherv\",\n            \"last_name\": \"Patil\",\n            \"gender\": \"M\",\n            \"email_id\": \"athervpatil05@gmail.com\",\n            \"country_code\": 91,\n            \"mobile_number\": 8983914599,\n            \"profile_picture\": \"http://sample-pic.com\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "(success) -> email_id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}get-user-data/?email=athervpatil05@gmail.com",
+							"host": [
+								"{{host}}get-user-data"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "8983914599",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "athervpatil05@gmail.com"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 25 Jan 2023 07:03:47 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "207"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"user_data\": [\n        {\n            \"first_name\": \"Atherv\",\n            \"last_name\": \"Patil\",\n            \"gender\": \"M\",\n            \"email_id\": \"athervpatil05@gmail.com\",\n            \"country_code\": 91,\n            \"mobile_number\": 8983914599,\n            \"profile_picture\": \"http://sample-pic.com\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "success->last_name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}get-user-data/?last_name=Patil",
+							"host": [
+								"{{host}}get-user-data"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "8983914599",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "athervpatil05@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "Gaurav",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "Patil"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:34:23 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "216"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"user_data\": [\n        {\n            \"first_name\": \"Atherv\",\n            \"last_name\": \"Patil\",\n            \"gender\": \"M\",\n            \"email_id\": \"athervpatil05@gmail.com\",\n            \"country_code\": 91,\n            \"mobile_number\": 8983914599,\n            \"profile_picture\": \"http:/facebook.com/athervpatil\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Failure->mobile_number",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}get-user-data/?mobile_number=898391459",
+							"host": [
+								"{{host}}get-user-data"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "898391459"
+								},
+								{
+									"key": "email",
+									"value": "athervpatil05@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "Gaurav",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "Patil",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:35:34 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "39"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"User not found\"\n}"
+				},
+				{
+					"name": "Failure-> email_id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}get-user-data/?email=athervpatil@gmail.com",
+							"host": [
+								"{{host}}get-user-data"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "898391459",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "athervpatil@gmail.com"
+								},
+								{
+									"key": "first_name",
+									"value": "Gaurav",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "Patil",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:36:13 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "39"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"User not found\"\n}"
+				},
+				{
+					"name": "Failure->first_name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}get-user-data/?first_name=asff",
+							"host": [
+								"{{host}}get-user-data"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "898391459",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "athervpatil@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "asff"
+								},
+								{
+									"key": "last_name",
+									"value": "Patil",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:36:44 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "39"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"User not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Gaurav\",\r\n    \"last_name\":\"Pore\",\r\n    \"gender\":\"M\",\r\n    \"email_id\":\"poregaurav13@gmail.com\",\r\n    \"country_code\":91,\r\n    \"mobile_number\":9049277948,\r\n    \"passcode\":1234,\r\n    \"profile_picture\":\"http:myprofile/gaurav.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}create-user",
+					"host": [
+						"{{host}}create-user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success->User created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"Test\",\r\n    \"last_name\":\"User\",\r\n    \"gender\":\"M\",\r\n    \"email_id\":\"Demo@gmail.com\",\r\n    \"country_code\":55,\r\n    \"mobile_number\":5191196556,\r\n    \"passcode\":1000,\r\n    \"profile_picture\":\"http:demo,com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}create-user",
+							"host": [
+								"{{host}}create-user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:38:25 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "50"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"User Created Successfully\"\n}"
+				},
+				{
+					"name": "Failure->User exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"Test\",\r\n    \"last_name\":\"User\",\r\n    \"gender\":\"M\",\r\n    \"email_id\":\"Demo@gmail.com\",\r\n    \"country_code\":55,\r\n    \"mobile_number\":5191196556,\r\n    \"passcode\":100,\r\n    \"profile_picture\":\"http:demo,com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}create-user",
+							"host": [
+								"{{host}}create-user"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:39:05 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "45"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"user already Exists!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}delete-user",
+					"host": [
+						"{{host}}delete-user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success->mobile_number",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}delete-user?mobile_number=5191196556",
+							"host": [
+								"{{host}}delete-user"
+							],
+							"query": [
+								{
+									"key": "email_id",
+									"value": "kalpeshpatil153@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "mobile_number",
+									"value": "5191196556"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:42:50 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "50"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"User Deleted Successfully\"\n}"
+				},
+				{
+					"name": "Success->email_id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}delete-user?email_id=Dem01@gmail.com",
+							"host": [
+								"{{host}}delete-user"
+							],
+							"query": [
+								{
+									"key": "email_id",
+									"value": "Dem01@gmail.com"
+								},
+								{
+									"key": "mobile_number",
+									"value": "5191196556",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:43:36 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "50"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"User Deleted Successfully\"\n}"
+				},
+				{
+					"name": "Failure->User Not Found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}delete-user?email_id=Dem01@gmail.com",
+							"host": [
+								"{{host}}delete-user"
+							],
+							"query": [
+								{
+									"key": "email_id",
+									"value": "Dem01@gmail.com"
+								},
+								{
+									"key": "mobile_number",
+									"value": "5191196556",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:43:56 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "39"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"User Not Found\"\n}"
+				},
+				{
+					"name": "Failure->No Input",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}delete-user",
+							"host": [
+								"{{host}}delete-user"
+							],
+							"query": [
+								{
+									"key": "email_id",
+									"value": "Dem01@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "mobile_number",
+									"value": "5191196556",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:44:21 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "39"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid Params\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update User Data",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_data\": {\r\n        \"first_name\": \"Atherv\",\r\n        \"last_name\": \"Patil\",\r\n        \"gender\": \"M\",\r\n        \"profile_picture\": \"http:/facebook.com/athervpatil\"\r\n    },\r\n    \"mobile_number\": \"8983914599\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}update-user-data",
+					"host": [
+						"{{host}}update-user-data"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success-> Data updated",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_data\": {\r\n        \"first_name\": \"Atherv\",\r\n        \"last_name\": \"Patil\",\r\n        \"gender\": \"M\",\r\n        \"profile_picture\": \"http:/facebook.com/athervpatil\"\r\n    },\r\n    \"mobile_number\": \"8983914599\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}update-user-data",
+							"host": [
+								"{{host}}update-user-data"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:45:04 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "55"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"User Data updated Successfully\"\n}"
+				},
+				{
+					"name": "Failure->User Not Found",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_data\": {\r\n        \"first_name\": \"Atherv\",\r\n        \"last_name\": \"Patil\",\r\n        \"gender\": \"M\",\r\n        \"profile_picture\": \"http:/facebook.com/athervpatil\"\r\n    },\r\n    \"mobile_number\": \"5252556665\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}update-user-data",
+							"host": [
+								"{{host}}update-user-data"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:45:26 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "39"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"User not Found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email_id\":\"athervpatil05@gmail.com\",\r\n    \"password\":\"5432\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}login-user",
+					"host": [
+						"{{host}}login-user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success->Token generated",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email_id\":\"athervpatil05@gmail.com\",\r\n    \"password\":\"5432\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}login-user",
+							"host": [
+								"{{host}}login-user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:46:10 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "356"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"tokens\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQ4MDczNzEsInN1YiI6ImF0aGVydnBhdGlsMDVAZ21haWwuY29tIn0.HzbjhrDn3OhhU4o8wTzJMK4HYsyJDnDSwnwToHTGoC0\",\n        \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU0MTAzNzEsInN1YiI6ImF0aGVydnBhdGlsMDVAZ21haWwuY29tIn0.QJRnfey99vtcYlSe2YrpvvCwnUuy6cqAQ1ONkINkgaM\"\n    }\n}"
+				},
+				{
+					"name": "Failure-> Incorrect Email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email_id\":\"athervpatil5@gmail.com\",\r\n    \"password\":\"5432\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}login-user",
+							"host": [
+								"{{host}}login-user"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:46:31 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "43"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"Incorrect Email!!!\"\n}"
+				},
+				{
+					"name": "Failure->Incorrect Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email_id\":\"athervpatil05@gmail.com\",\r\n    \"password\":\"5431\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}login-user",
+							"host": [
+								"{{host}}login-user"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 27 Jan 2023 07:46:54 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "46"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"Incorrect Password!!!\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://127.0.0.1:8000/",
+			"type": "default"
+		}
+	]
+}
